@@ -962,20 +962,20 @@ sub main {
 }
 
 sub load_graph_definitions {
-    my $Canvas        = 'FFFFFF';
-    my $FullRed       = 'FF0000';
-    my $FullGreen     = '00E000';
-    my $FullBlue      = '0000FF';
-    my $FullYellow    = 'F0A000';
-    my $FullCyan      = '00A0FF';
-    my $FullMagenta   = 'A000FF';
-    my $HalfRed       = 'F7B7B7';
-    my $HalfGreen     = 'B7EFB7';
-    my $HalfBlue      = 'B7B7F7';
-    my $HalfYellow    = 'F3DFB7';
-    my $HalfCyan      = 'B7DFF7';
-    my $HalfMagenta   = 'DFB7F7';
-    my $HalfBlueGreen = '89B3C9';
+    my $Canvas        = '000000';
+    my $FullRed       = 'af0000';
+    my $FullGreen     = '00c000';
+    my $FullBlue      = '0000af';
+    my $FullYellow    = 'a0a000';
+    my $FullCyan      = '0090af';
+    my $FullMagenta   = '9000af';
+    my $HalfRed       = 'a79797';
+    my $HalfGreen     = '679f67';
+    my $HalfBlue      = '9797a7';
+    my $HalfYellow    = 'a3af97';
+    my $HalfCyan      = 'b7dff7';
+    my $HalfMagenta   = 'dfb7f7';
+    my $HalfBlueGreen = '89b3c9';
     $GraphDefs = {
         apache_bytes => [
             'DEF:min_raw={file}:count:MIN',
@@ -3026,13 +3026,13 @@ sub meta_graph_cpu {
     $opts->{'rrd_opts'} = [ '-v', 'Percent' ];
     my @files = ();
     $opts->{'colors'} = {
-        'idle'      => 'ffffff',
+        'idle'      => '3f3f3f',
         'nice'      => '00e000',
-        'user'      => '0000ff',
-        'wait'      => 'ffb000',
-        'system'    => 'ff0000',
-        'softirq'   => 'ff00ff',
-        'interrupt' => 'a000a0',
+        'user'      => '00003f',
+        'wait'      => '3fb000',
+        'system'    => '3f0000',
+        'softirq'   => '3f003f',
+        'interrupt' => '100010',
         'steal'     => '000000'
     };
     _custom_sort_arrayref( $type_instances,
